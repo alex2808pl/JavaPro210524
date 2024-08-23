@@ -16,6 +16,7 @@ public class MainPrinter {
         jetPrinter.gasstation();
         jetPrinter.print();
 
-        Printer printer = new Printer();
+        //Объекты абстрактного класса мы создавать не можем
+        // Printer printer = new Printer();
     }
 }
