@@ -11,4 +11,8 @@ public class UnicornExt extends Horse{
     public void butt() { //умение драться
         System.out.println(name+ " при защите бодается "+countHorn+" рогом/ами");
     }
+
+    public void transportOther() {
+        System.out.println(name+ " везет груз как единорог");
+    }
 }

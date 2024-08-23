@@ -25,7 +25,7 @@ public class Horse {
     }
 
     public void transports() {
-        System.out.println(name+" везет груз весом "+weight+" как лошадь");
+        System.out.println(name+" везет груз весом "+weight+" как лошадь по земле");
     }
 
     // не наследуется потомками

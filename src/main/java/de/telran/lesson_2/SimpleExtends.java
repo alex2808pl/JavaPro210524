@@ -21,11 +21,12 @@ public class SimpleExtends {
         horse3.transports();
         System.out.println();
 
-        Pegasus pegasus1 = new Pegasus("Сема", "черный", 20, 2);
-        pegasus1.run();
-        pegasus1.transports();
-        pegasus1.fly();
-        System.out.println();
+// Дублирование кода
+//        Pegasus pegasus1 = new Pegasus("Сема", "черный", 20, 2);
+//        pegasus1.run();
+//        pegasus1.transports();
+//        pegasus1.fly();
+//        System.out.println();
 
         PegasusExt pegasusExt = new PegasusExt("Пинки", "розовый", 10, 2);
         pegasusExt.fly();
@@ -35,8 +36,9 @@ public class SimpleExtends {
 
         UnicornExt unicornExt = new UnicornExt("Бур", "серый", 30, 1);
         unicornExt.run();
-        unicornExt.transports();
+       // unicornExt.transports();
         unicornExt.butt();
+        unicornExt.transportOther();
         System.out.println();
 
         UnicоrnRace unicоrnRace = new UnicоrnRace("Муся", "лиловый", 80, 2, 3);
