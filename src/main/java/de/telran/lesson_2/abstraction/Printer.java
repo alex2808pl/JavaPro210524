@@ -18,7 +18,7 @@ abstract public class Printer {
     }
 
     // заправлять
-    abstract void gasstation();
+    abstract void refill();
 
     // печатать
     abstract void print();

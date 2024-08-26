@@ -21,6 +21,8 @@ public class SimpleExtends {
         horse3.transports();
         System.out.println();
 
+        System.out.println(Horse.count + " общее количество лошадей");
+
 // Дублирование кода
 //        Pegasus pegasus1 = new Pegasus("Сема", "черный", 20, 2);
 //        pegasus1.run();
@@ -47,6 +49,8 @@ public class SimpleExtends {
         unicоrnRace.butt();
         unicоrnRace.transportPassangers();
         System.out.println();
+
+        System.out.println(Horse.count + " общее количество лошадей");
 
 
     }

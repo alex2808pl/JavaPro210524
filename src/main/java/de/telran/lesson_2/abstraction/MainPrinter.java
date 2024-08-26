@@ -5,7 +5,7 @@ public class MainPrinter {
         LaserPrinter laserPrinter = new LaserPrinter("HP", "LJ100",2005, 1000);
         laserPrinter.repair();
         laserPrinter.service();
-        laserPrinter.gasstation();
+        laserPrinter.refill();
         laserPrinter.print();
 
         System.out.println();
@@ -13,7 +13,7 @@ public class MainPrinter {
         JetPrinter jetPrinter = new JetPrinter("Epson", "Jet200", 2010);
         jetPrinter.repair();
         jetPrinter.service();
-        jetPrinter.gasstation();
+        jetPrinter.refill();
         jetPrinter.print();
 
         //Объекты абстрактного класса мы создавать не можем

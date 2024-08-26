@@ -6,18 +6,23 @@ public class Horse {
     int weight; // количество груза
     private int countTooths; // не наследуется потомками
 
+    static int count;  // общее количество произведенных лошадей
+
     public Horse() {
+        count++;
     }
 
     public Horse(String name1, String color1, int weight1) {
         name = name1;
         color = color1;
         weight = weight1;
+        count++;
     }
 
     public Horse(String name, String color) {
         this.color = color;
         this.name = name;
+        count++;
     }
 
     public void run() {

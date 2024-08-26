@@ -10,7 +10,7 @@ public class JetPrinter extends Printer{
     }
 
     @Override
-    void gasstation() {
+    void refill() {
         System.out.println(name + " заправляется заменой картриджа с краской");
     }
 

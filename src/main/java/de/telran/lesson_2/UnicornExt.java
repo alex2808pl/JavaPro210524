@@ -13,6 +13,6 @@ public class UnicornExt extends Horse{
     }
 
     public void transportOther() {
-        System.out.println(name+ " везет груз как единорог");
+        System.out.println(name+ " везет груз как единорог ");
     }
 }
