@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class MainDynPolym {
     public static void main(String[] args) {
+        // Динамический полиморфизм на примере переопределение методов
+
+        // динамический полиморфизм при работе с предком
         Dance dance = new Dance("Вася", 15);
         dance.dance();
 
@@ -24,8 +27,9 @@ public class MainDynPolym {
         Dance[] prog1 = {dance, hipHopDance, breakDance};
         koncert(prog1);
 
-        /// Абстрактный класс Singer
-        // Singer singer = new Singer("Даша"); //не млгу создать объект абстрактного класса
+        /// Абстрактный класс Singer - динамический полиморфизм при работе с абстрактным классом
+
+        // Singer singer = new Singer("Даша"); //не могу создать объект абстрактного класса
         System.out.println();
 
         Singer singer1 = new PopSinger("Маша");
@@ -34,7 +38,9 @@ public class MainDynPolym {
         singer1 = new RockSinger("Далила");
         singer1.sing();
 
-        /// интерфейс Playable
+
+        /// интерфейс Playable - динамический полиморфизм при работе с интерфейсом
+        
         // Playable playable = new Playable(); //не млгу создать объект интерфейса
 
         System.out.println();

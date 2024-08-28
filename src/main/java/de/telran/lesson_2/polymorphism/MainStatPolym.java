@@ -1,6 +1,7 @@
 package de.telran.lesson_2.polymorphism;
 
-public class MainStatPolym { //перегрузка метода
+public class MainStatPolym {
+    //перегрузка метода - пример статического полиморфизма
     static int add(int v1, int v2) {
         System.out.println("Выполняется int add(int v1, int v2");
         return v1 + v2;
@@ -32,8 +33,6 @@ public class MainStatPolym { //перегрузка метода
         System.out.println("Выполняется double add(double v1, int v2)");
         return v1 + v2;
     }
-
-
 
     public static void main(String[] args) {
         System.out.println(add(5,8));
