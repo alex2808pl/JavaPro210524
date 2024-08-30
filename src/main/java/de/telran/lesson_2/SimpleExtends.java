@@ -58,6 +58,12 @@ public class SimpleExtends {
         horse.transports(); // благодаря полиморфизму, поведение будет как у пегаса
 
 
+        System.out.println();
+        // Пример Ассоциации
+        UniPegasus uniPegasus = new UniPegasus("Uni","черный",10, 4, 1);
+        uniPegasus.fly();
+        uniPegasus.unicorn.butt();
+
     }
 
 }
