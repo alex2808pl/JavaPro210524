@@ -57,7 +57,9 @@ public class MainDays {
         System.out.println("Новый подход при работе со switch-case");
         // Новый подход при работе со switch-case
         switch (dayE2) {
-            case SATURDAY, SUNDAY -> System.out.println("Ура, выходной!");
+            case SATURDAY, SUNDAY -> {
+                System.out.println("Ура, выходной!");
+                }
             default -> System.out.println("Надо топать на работу!");
         }
 
