@@ -127,6 +127,8 @@ public class MainList {
         list3.set(3,11);
         System.out.println(list3);
 
+        list3.clear(); //очистить список
+
 
 
     }
