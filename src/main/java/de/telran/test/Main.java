@@ -1,28 +1,31 @@
 package de.telran.test;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Создаем объект Scanner для ввода данных с клавиатуры
-        Scanner scanner = new Scanner(System.in);
+        int o1 = Integer.MAX_VALUE-10;
+        int o2 = 11;
 
-        // Ввод названия месяца
-        System.out.print("Введите название месяца на русском: ");
-        String monthName = scanner.nextLine();
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MAX_VALUE+1);
+        System.out.println();
+        System.out.println(Integer.MIN_VALUE);
+        System.out.println(Integer.MIN_VALUE-1);
+        System.out.println();
 
-        // Закрываем Scanner
-        scanner.close();
+        System.out.println(-1_147_483_647 - 1_000_000_002);
+        System.out.println();
 
-        // Получаем месяц по русскому названию
-        Month currentMonth = Month.getByRussianName(monthName);
+        System.out.println(o1);
+        System.out.println(o1+10);
+        System.out.println(o1+100);
 
-        // Вывод результата, если месяц корректно определен
-        if (currentMonth != null) {
-            System.out.println("Месяц: " + currentMonth.getRussianName());
-            System.out.println(currentMonth.recommendDiet());
-        } else {
-            System.out.println("Месяц не найден. Проверьте ввод.");
-        }
+
+
+
+
+
     }
 }
