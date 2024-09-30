@@ -1,0 +1,5 @@
+class Phone:
+    private String name;
+    private int price;
+
+1. Найти сумму цен тех телефонов, у которых цена меньше определенного значения.
