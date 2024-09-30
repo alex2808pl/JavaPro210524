@@ -44,15 +44,52 @@ public class MainPhone {
             .filter(x -> x.getPrice() > thresholdPrice)
             .mapToInt(x -> x.getPrice())
             .sum();
-        System.out.println(sum);
-    }
+        System.out.println("sum() = "+ sum);
+
 
         System.out.println(list);
 
-        //count sum of all Phones, kotorie costs more then 600
-        System.out.println(list.stream()
+        //count sum of all Phones, costs more then 600
+        System.out.println("collect = "+
+                list.stream()
                 .filter(x -> x.getPrice() > 600)
                 .collect((summingDouble(Phone::getPrice))));
+
+        // Решение через reduce
+        //U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
+        int identity = 0;
+        System.out.println("reduce = "+
+                list.stream()
+                .reduce(identity,
+                        (x, y) -> {
+                            System.out.println(" -- Acc --- x = " + x + " + " + y.getPrice());
+                            if (y.getPrice() > 600)
+                                return x + y.getPrice();
+                            else
+                                return x + 0;
+                        },
+                        (y, s) -> {
+                            System.out.println(" -- Comb --- s = " + y + " + " + s);
+                            return y + s;
+                        }
+                ));
+
+        identity = 0;
+        System.out.println("reduce (parallelStream) = "+
+                list.parallelStream()
+                        .reduce(identity,
+                                (x, y) -> {
+                                    System.out.println(" -- Acc --- x = " + x + " + " + y.getPrice());
+                                    if (y.getPrice() > 600)
+                                        return x + y.getPrice();
+                                    else
+                                        return x + 0;
+                                },
+                                (y, s) -> {
+                                    System.out.println(" -- Comb --- s = " + y + " + " + s);
+                                    return y + s;
+                                }
+                        ));
 
     }
 }

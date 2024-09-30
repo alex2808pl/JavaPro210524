@@ -21,5 +21,7 @@ public class MainReduce {
 
 
         //U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
+        // (смотреть практику этого урока)
+        // Работает только с parallelStream
     }
 }
