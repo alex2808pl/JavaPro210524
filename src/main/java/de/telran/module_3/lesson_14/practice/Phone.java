@@ -3,25 +3,37 @@ package de.telran.module_3.lesson_14.practice;
 import java.util.Objects;
 
 public class Phone {
-   private String name;
-   private int price;
-   private String brand;
+    private String name;
+    private int price;
+    private String brand;
 
+    public Phone(String name, int price, String brand) {
+        this.name = name;
+        this.price = price;
+        this.brand = brand;
 
-   public Phone(String name, int price, String brand) {
-       this.name = name;
-       this.price = price;
-       this.brand = brand;
-   }
-   public String getName() {
-       return name;
-   }
-   public int getPrice() {
-       return price;
-   }
-   public String getBrand() {
-       return brand;
-   }
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", brand='" + brand + '\'' +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -35,13 +47,4 @@ public class Phone {
     public int hashCode() {
         return Objects.hash(name, price, brand);
     }
-
-    @Override
-    public String toString() {
-        return "Phone{" +
-            "name='" + name + '\'' +
-            ", price=" + price +
-            '}';
-    }
-
 }

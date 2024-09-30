@@ -3,6 +3,8 @@ package de.telran.module_3.lesson_14.practice;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.stream.Collectors.summingDouble;
+
 public class MainPhone {
     public static void main(String[] args) {
         Phone phone = new Phone("Nokia 3310", 500, "Nokia");
@@ -19,7 +21,7 @@ public class MainPhone {
         Phone phone9 = new Phone("Motorola 38", 850, "Motorola");
         Phone phone10 = new Phone("Motorola 39", 950, "Motorola");
 
-        List<Phone> list = new ArrayList<>();
+      List<Phone> list = new ArrayList<>();
         list.add(phone);
         list.add(phone1);
         list.add(phone2);
@@ -43,5 +45,14 @@ public class MainPhone {
             .mapToInt(x -> x.getPrice())
             .sum();
         System.out.println(sum);
+    }
+
+        System.out.println(list);
+
+        //count sum of all Phones, kotorie costs more then 600
+        System.out.println(list.stream()
+                .filter(x -> x.getPrice() > 600)
+                .collect((summingDouble(Phone::getPrice))));
+
     }
 }
