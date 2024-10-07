@@ -13,14 +13,14 @@ public class MainDeleteDirFile {
     // удаление папки с дочерними элементами
     public static void deleteDir(File file) {
         File[] files = file.listFiles();
-        if (files != null) {
+        if (files != null) { //директорий пустой
             for (File f : files) {
                 if (f.isDirectory()) {
                     deleteDir(f);
-                } else f.delete();
+                } else f.delete(); //удаляем файл
             }
         }
-        file.delete();
+        file.delete(); //удаляем пустой директорий
     }
 }
 
