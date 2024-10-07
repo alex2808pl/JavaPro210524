@@ -44,8 +44,10 @@ public class MainRegEx {
         System.out.println();
 
         text = "Мама,мыла раму.Мокрой тряпкой?";
-        delimiter = "[\\s,.?]"; //на слова
+        //text = "I learned about Telran College and now.I'm studying Java!";
+        //delimiter = "[\\s,.?]"; //на слова
         //delimiter = "";//на символы
+        delimiter = "\\W+";//на слова
         Arrays.stream(text.split(delimiter)).forEach(s-> System.out.print(s+" "));
         System.out.println();
 
