@@ -8,14 +8,15 @@ public class MainTaskChickenEgg {
                 () -> {
                     try {
                         while (true) {
+                            Thread.sleep(1000);
+
                             countSimple(2, 100_000);//Imitation of working
+                            System.out.println("Chicken");
+
                             if (Thread.interrupted()) {
                                 System.out.println("Winner is chicken -  Is working");
                                 return;
                             }
-                            System.out.println("Chicken");
-
-                            Thread.sleep(1000);
 
                         }
                     } catch (InterruptedException e) {
@@ -31,14 +32,14 @@ public class MainTaskChickenEgg {
                     try {
                         while (true) {
 
+                            Thread.sleep(1000);
+
                             countSimple(2, 100_000);//Imitation of working
+                            System.out.println("Egg");
                             if (Thread.interrupted()) {
                                 System.out.println("Winner is egg - Is working");
                                 return;
                             }
-                            System.out.println("Egg");
-
-                            Thread.sleep(1000);
 
 
                         }
@@ -63,6 +64,7 @@ public class MainTaskChickenEgg {
             System.out.println(chicken.getState());
             chicken.interrupt();
         } else if (scan == 2) {
+            System.out.println(egg.getState());
             egg.interrupt();
 
         } else {
