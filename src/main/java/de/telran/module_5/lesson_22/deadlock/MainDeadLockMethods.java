@@ -1,8 +1,6 @@
 package de.telran.module_5.lesson_22.deadlock;
 
-import de.telran.Main;
-
-public class Bow {
+public class MainDeadLockMethods {
     static class Friend {
         private final String name;
         public Friend(String name) {

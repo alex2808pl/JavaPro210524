@@ -1,6 +1,6 @@
 package de.telran.module_5.lesson_22.deadlock;
 
-public class MainDeadLock2 {
+public class MainDeadLock {
     public static Object lock1 = new Object();
     public static Object lock2 = new Object();
 
