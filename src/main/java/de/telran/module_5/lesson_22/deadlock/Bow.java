@@ -1,6 +1,8 @@
-package de.telran;
+package de.telran.module_5.lesson_22.deadlock;
 
-public class Main {
+import de.telran.Main;
+
+public class Bow {
     static class Friend {
         private final String name;
         public Friend(String name) {
@@ -19,10 +21,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        final Friend alphonse =
-                new Friend("Alphonse");
-        final Friend gaston =
-                new Friend("Gaston");
+        final Friend alphonse = new Friend("Alphonse");
+        final Friend gaston = new Friend("Gaston");
+
+
         new Thread(new Runnable() {
             @Override
             public void run() {
